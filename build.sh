@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
 else
   which curl >/dev/null 2>/dev/null
   if [ $? -eq 0 ]; then
-   curl -o rust.tar.gz "$DOWNLOAD_LINK"
+   curl -L -o rust.tar.gz "$DOWNLOAD_LINK"
   else
     echo "wget or curl required"
     exit 1
