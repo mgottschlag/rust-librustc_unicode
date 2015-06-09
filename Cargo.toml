@@ -1,7 +1,7 @@
 [package]
 name = "core"
 version = "1.0.0"
-authors = ["Ben Harris <mail@bharr.is>", "Matt Ickstadt <matt@icky.pw>"]
+authors = ["Ben Harris <mail@bharr.is>", "Matt Ickstadt <matt@icky.pw>", "Matt Coffin <mcoffin13@gmail.com>"]
 build = "./build.rs"
 
 [lib]
