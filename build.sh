@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 which wget >/dev/null 2>/dev/null
 if [ $? -eq 0 ]; then
   wget -q -O rust.tar.gz "$DOWNLOAD_LINK"
@@ -11,4 +12,4 @@ else
     exit 1
   fi
 fi
-tar -zx --strip-components=1 -f rust.tar.gz
+exec tar -zx --strip-components=1 -f rust.tar.gz
