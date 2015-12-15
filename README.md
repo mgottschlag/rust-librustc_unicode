@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/hackndev/rust-libcore.svg#branch=master)](https://travis-ci.org/hackndev/rust-libcore) 
+[![](http://meritbadge.herokuapp.com/rust-libcore)](https://crates.io/crates/rust-libcore)
 
 # rust-libcore
 

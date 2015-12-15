@@ -1,6 +1,6 @@
 [package]
 name = "rust-libcore"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
 description = "Libcore wrapped into cargo package, suitable for cross-builds"
