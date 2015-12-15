@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "rust-libcore"
 version = "0.0.1"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
