@@ -15,16 +15,6 @@ fn ensure_dir<P: AsRef<Path>>(path: P) -> io::Result<()> {
 }
 
 fn main() {
-    // Ensure the rust directory exists
-    if let Err(e) = ensure_dir(RUST_DIR) {
-        panic!(e);
-    }
-
-    // cd to the rust directory
-    if let Err(e) = env::set_current_dir(RUST_DIR) {
-        panic!(e);
-    }
-
     // Run rustc to get the version
     let rustc_output = Command::new("rustc").arg("--version")
         .output().unwrap_or_else(|e| {
@@ -36,6 +26,28 @@ fn main() {
         Err(e) => panic!(e),
     }.trim_left_matches("(");
 
+    match fs::metadata(Path::new(RUST_DIR).join(version)) {
+        Ok(meta) => {
+            if !meta.is_file() {
+                match fs::remove_dir_all(RUST_DIR) {
+                    Err(e) => panic!(e),
+                    _ => {},
+                }
+            }
+        },
+        Err(..) => {}, // Ok to ignore since this just means that the version file doesn't exist
+    }
+
+    // Ensure the rust directory exists
+    if let Err(e) = ensure_dir(RUST_DIR) {
+        panic!(e);
+    }
+
+    // cd to the rust directory
+    if let Err(e) = env::set_current_dir(RUST_DIR) {
+        panic!(e);
+    }
+
     // Shell out to perform the build.  In the future, the logic
     // to grab libcore could be done in rust in order to support
     // platforms without a posix shell
@@ -46,4 +58,11 @@ fn main() {
         .status().unwrap_or_else(|e| {
             panic!("failed to execute process: {}", e);
         });
+
+    // Now that we've successfully unzipped, write the version
+    // file as a success tag.
+    match fs::File::create(version) {
+        Err(e) => panic!(e),
+        _ => {},
+    }
 }
