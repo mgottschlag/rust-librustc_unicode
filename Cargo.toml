@@ -4,7 +4,7 @@ version = "0.0.1"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
 description = "Libcore wrapped into cargo package, suitable for cross-builds"
-license-file = "https://github.com/rust-lang/rust/blob/master/COPYRIGHT"
+license-file = "COPYRIGHT"
 repository = "https://github.com/rust-lang/rust"
 
 [lib]
