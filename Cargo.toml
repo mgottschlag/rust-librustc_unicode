@@ -1,8 +1,11 @@
 [package]
 name = "core"
-version = "1.0.0"
-authors = ["Ben Harris <mail@bharr.is>", "Matt Ickstadt <matt@icky.pw>", "Matt Coffin <mcoffin13@gmail.com>"]
+version = "0.0.1"
+authors = ["The Rust Developers Team"]
 build = "./build.rs"
+description = "Libcore wrapped into cargo package, suitable for cross-builds"
+license-file = "https://github.com/rust-lang/rust/blob/master/COPYRIGHT"
+repository = "https://github.com/rust-lang/rust"
 
 [lib]
 name = "core"
