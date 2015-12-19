@@ -1,11 +1,11 @@
 [package]
-name = "core"
-version = "0.0.2"
+name = "rust-libcore"
+version = "0.0.3"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
 description = "Libcore wrapped into cargo package, suitable for cross-builds"
 license-file = "COPYRIGHT"
-repository = "https://github.com/rust-lang/rust"
+repository = "https://github.com/hackndev/rust-libcore"
 
 [lib]
 name = "core"
