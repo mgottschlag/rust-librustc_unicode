@@ -1,10 +1,7 @@
-[![Build Status](https://travis-ci.org/hackndev/rust-libcore.svg#branch=master)](https://travis-ci.org/hackndev/rust-libcore) 
-[![](http://meritbadge.herokuapp.com/rust-libcore)](https://crates.io/crates/rust-libcore)
+# rust-librustc\_unicode
 
-# rust-libcore
-
-This crate provides `libcore` as a standalone cargo package.
+This crate provides `librustc\_unicode` as a standalone cargo package.
 
 ## Versioning
 
-`rust-libcore` will run `rustc --version` to determine the version of rustc that we are using. The version of libcore appropriate for the compiler will be used.
+`rust-librustc\_unicode` will run `rustc --version` to determine the version of rustc that we are using. The version of libcore appropriate for the compiler will be used.

@@ -1,12 +1,12 @@
 [package]
-name = "rust-libcore"
+name = "rustc_unicode"
 version = "0.0.3"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
 description = "Libcore wrapped into cargo package, suitable for cross-builds"
 license-file = "COPYRIGHT"
-repository = "https://github.com/hackndev/rust-libcore"
+repository = "https://github.com/mgottschlag/rust-librustc_unicode"
 
 [lib]
-name = "core"
-path = "rust/src/libcore/lib.rs"
+name = "rustc_unicode"
+path = "rust/src/librustc_unicode/lib.rs"
